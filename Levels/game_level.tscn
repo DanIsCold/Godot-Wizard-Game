@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dymjbjsrdbuv"]
+
+[ext_resource type="PackedScene" uid="uid://c5ytikgbi8egs" path="res://Characters/player_mage.tscn" id="1_mem88"]
+
+[node name="GameLevel" type="Node2D"]
+
+[node name="PlayerMage" parent="." instance=ExtResource("1_mem88")]
+position = Vector2(122, 86)
