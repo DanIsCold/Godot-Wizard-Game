@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6htppx5ybd6a"]
+
+[ext_resource type="Texture2D" uid="uid://cv6bldbg66icy" path="res://Art/NinjaAdventure/FX/Smoke/Smoke/SpriteSheet.png" id="1_f6fpj"]
+[ext_resource type="Script" path="res://Projectiles/smoke.gd" id="2_aajgv"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nnh06"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="smoke" type="CPUParticles2D"]
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_nnh06")
+emitting = false
+amount = 1
+lifetime = 0.3
+one_shot = true
+fixed_fps = 30
+draw_order = 1
+texture = ExtResource("1_f6fpj")
+gravity = Vector2(0, 0)
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+script = ExtResource("2_aajgv")

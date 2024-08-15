@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c5ytikgbi8egs"]
+[gd_scene load_steps=30 format=3 uid="uid://c5ytikgbi8egs"]
 
 [ext_resource type="Texture2D" uid="uid://djdu5hhfhy5t2" path="res://Art/NinjaAdventure/Actor/Characters/BlackNinjaMage/SpriteSheet.png" id="1_8c5u4"]
 [ext_resource type="Script" path="res://Characters/player_mage.gd" id="1_g6ffj"]
@@ -235,20 +235,6 @@ transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_
 [sub_resource type="CircleShape2D" id="CircleShape2D_54dp6"]
 radius = 5.09902
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgar8"]
-bg_color = Color(0.180005, 0.180005, 0.180005, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa2g2"]
-bg_color = Color(0.105882, 0.709804, 0.0235294, 1)
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-
 [node name="PlayerMage" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 2
@@ -284,6 +270,9 @@ parameters/Walk/blend_position = Vector2(-1.10952, 0.00582004)
 [node name="Book" parent="." instance=ExtResource("3_giw2r")]
 metadata/_edit_lock_ = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
 collision_layer = 0
@@ -293,14 +282,3 @@ collision_mask = 4
 rotation = 1.5708
 shape = SubResource("CircleShape2D_54dp6")
 debug_color = Color(0.785442, 0.411767, 0.36641, 0.42)
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-unique_name_in_owner = true
-offset_left = -13.0
-offset_top = -20.0
-offset_right = 13.0
-offset_bottom = -17.0
-theme_override_styles/background = SubResource("StyleBoxFlat_pgar8")
-theme_override_styles/fill = SubResource("StyleBoxFlat_qa2g2")
-value = 100.0
-show_percentage = false
